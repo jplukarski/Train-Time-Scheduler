@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Train Scheduler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/style.css" />
+
+</head>
+
+<body>
+    <header class="jumbotron container header">
+        <h1>Anytime is Train Time</h1>
+        <h6>Choo Choo!</h6>
+    </header>
+
+    <div class="train-table">
+        <div class="table-head">Current Train Times</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (Min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <form class="add-train">
+        <div class="table-head">Add Train</div>
+        <div class="form-group">
+            <label for="train-name">Train Name</label>
+            <input type="text" class="form-control" id="train-input" placeholder="Red Line">
+        </div>
+        <div class="form-group">
+            <label for="destination">Destination</label>
+            <input type="text" class="form-control" id="destination-input" placeholder="95th/Dan Ryan">
+        </div>
+        <div class="form-group">
+            <label for="First-train-time">First Train Time (HH:MM)</label>
+            <input type="time" class="form-control" id="first-train-time" placeholder="8:00 am">
+        </div>
+        <div class="form-group">
+            <label for="Frequency">Frequency (minutes)</label>
+            <input type="number" class="form-control" id="frequency" placeholder="5">
+        </div>
+
+        <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCZiwimhrzG5FRapTNgYX8GUVUHWvu6GRQ",
+            authDomain: "train-scheduler-72f3f.firebaseapp.com",
+            databaseURL: "https://train-scheduler-72f3f.firebaseio.com",
+            projectId: "train-scheduler-72f3f",
+            storageBucket: "train-scheduler-72f3f.appspot.com",
+            messagingSenderId: "1000673315836"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8='
+        crossorigin='anonymous'></script>
+    <script src="./assets/app.js"></script>
+</body>
+
+
+</html>

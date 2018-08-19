@@ -1,0 +1,28 @@
+.header {
+    text-align: center;
+    background-color: #00a0d8;
+}
+
+.table-head {
+    background-color: #cb5351;
+    color: ghostwhite;
+    padding:10px;
+}
+
+.train-table {
+    border-width: 1px;
+    border-color: #cb5351;
+    border-style: solid;
+    margin-right:5%;
+    margin-left: 5%;
+    margin-bottom:10px;
+}
+
+.add-train {
+    border-width: 1px;
+    border-color: #cb5351;
+    border-style: solid;
+    margin-right:5%;
+    margin-left: 5%;
+    margin-bottom:10px;
+}
